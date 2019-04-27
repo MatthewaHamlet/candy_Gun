@@ -1,0 +1,290 @@
+/* ----------Landing section settings----------- */
+@import 'variables';
+
+
+
+section#main {
+    overflow: hidden;
+    width: 100vw;
+
+    *:focus {
+        outline: none;
+    }
+
+    // Header grid setup 
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1.1fr 0.9fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "container__img--logo container__copy--title container__copy--title container__copy--title""container__nav container__parallax--slider container__parallax--slider container--empty""container__nav container__parallax--slider container__parallax--slider container__img--social";
+
+        // Logo container left top, image background
+        .container__img--logo {
+            grid-area: container__img--logo;
+            width: 353px;
+            height: 274px;
+            background: url(/images/indexImg/header/logo/candyGunBulletLogoRectangle.png) no-repeat center center;
+            background-size: cover;
+            position: relative;
+            z-index: 3;
+            border-radius: 3px;
+
+            // Logo image 
+            img[alt="Candy gun bullet logo"] {
+                margin-top: 1.75rem;
+                margin-left: 2.5rem;
+                cursor: $heartCursorTwo;
+
+            }
+        }
+
+        // Title image 
+        .container__copy--title {
+            grid-area: container__copy--title;
+            position: relative;
+            z-index: 4;
+            right: 28rem;
+            top: -4rem;
+
+            img[alt="Candy gun title"] {
+                width: 100%;
+                cursor: $heartCursor;
+            }
+        }
+
+        // Navigation 
+        .container__nav {
+            grid-area: container__nav;
+            margin-left: 2rem;
+            margin-top: -12rem;
+            position: relative;
+            z-index: 4;
+
+            ul {
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+
+                    // Nav items
+                    li {
+                        margin-bottom: 10rem;
+                        font-family: 'whomp';
+                        font-size: 1.625rem;
+                        color: $tertiaryColor;
+                        -webkit-text-stroke: 1px $secondaryColor;
+                        line-height: 49px;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                        cursor: $heartCursor;
+
+                        // Nav hover -> image reveal 
+                        &:hover {
+                            background: url(/images/indexImg/header/nav/navHoverImage.png) no-repeat center center;
+                            background-size: 90%;
+                            margin-left: 58px;
+                            color: $secondaryColor;
+                            transition: margin-left .05s;
+                            transform: scale(1.08);
+                        }
+
+                        &:active {
+                            background: url(/images/indexImg/header/nav/navHoverImage.png) no-repeat center center;
+                            background-size: 90%;
+                            margin-left: 58px;
+                            color: $secondaryColor;
+                            transition: margin-left .05s;
+                            transform: scale(1.08);
+                        }
+
+                    }
+                }
+            }
+        }
+
+        // Main image 
+        .container__parallax--slider {
+            grid-area: container__parallax--slider;
+            position: relative;
+
+            .parallax__image {
+                position: absolute;
+                width: 1572.73px;
+                height: 991px;
+                top: -50%;
+                left: -22%;
+                z-index: 1;
+                background: url(/images/indexImg/header/parallax/parallaxImageOne.svg) no-repeat center center;
+                background-size: contain;
+                border-radius: 3px;
+            }
+
+            // CTA
+            .container__copy--cta {
+                width: 485px;
+                height: 284px;
+                position: relative;
+                top: 500px;
+                left: 40%;
+
+                p {
+                    font-family: 'Roboto';
+                    font-size: 20px;
+                    color: $secondaryColor;
+                    opacity: .86;
+                    line-height: 26px;
+                }
+
+                a {
+                    text-decoration: none;
+
+                    // Global Btn 
+                    .btn--cta {
+                        width: 303px;
+                        height: 72px;
+                        background: $secondaryColor;
+                        border-radius: 6px;
+                        font-size: 28px;
+                        font-family: 'whomp';
+                        color: $primaryColor;
+                        line-height: 55px;
+                        float: right;
+                        margin-top: 17px;
+                        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+                        outline: none;
+                        border: none;
+                        cursor: $heartCursor;
+
+                        &:hover {
+                            background: $primaryColor;
+                            color: $secondaryColor;
+                            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16);
+                            transition: all .5s;
+                        }
+
+                        &:active {
+                            background: $primaryColor;
+                            color: $secondaryColor;
+                            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16);
+                            transition: all .5s;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Social container, background img 
+        .container__img--social {
+            grid-area: container__img--social;
+            background: url(/images/indexImg/header/social/socialRectangleBottomRight.png);
+            position: relative;
+            bottom: 27%;
+            z-index: 5;
+            width: 437px;
+            height: 365px;
+            border-radius: 3px;
+
+            // Logo 
+            img[alt="Candy gun logo bottom"] {
+                position: absolute;
+                left: 80px;
+                top: 58px;
+                transform: rotate(90deg);
+                width: 140px;
+                height: 202px;
+            }
+
+            // Social image list 
+            ul {
+                list-style: none;
+                float: right;
+                margin-top: 68px;
+                margin-right: 12px;
+
+                li {
+                    margin-bottom: 16px;
+
+                    img.social--icon {
+                        opacity: .86;
+                        cursor: $heartCursor;
+
+                        &:hover {
+                            transform: scale(1.15);
+                            filter: brightness(500%);
+                        }
+                    }
+                }
+            }
+
+            // Follow text
+            h2 {
+                position: relative;
+                top: 275px;
+                left: 32px;
+                font-family: 'whomp';
+                font-size: 54px;
+                -webkit-text-stroke: 1px $secondaryColor;
+                line-height: 106px;
+                color: #FFFFFF;
+                opacity: .33;
+            }
+        }
+
+        .container--empty {
+            grid-area: container--empty;
+        }
+
+
+        @media all and (-ms-high-contrast:none) {
+            .grid-container {
+                display: -ms-grid;
+                -ms-grid-columns: 1fr 1fr 1.1fr 0.9fr;
+                -ms-grid-rows: 1fr 1fr 1fr;
+            }
+
+            .container__img--logo {
+                -ms-grid-row: 1;
+                -ms-grid-row-span: 1;
+                -ms-grid-col: 1;
+                -ms-grid-col-span: 1;
+            }
+
+            .container__copy--title {
+                -ms-grid-row: 1;
+                -ms-grid-row-span: 1;
+                -ms-grid-col: 2;
+                -ms-grid-col-span: 3;
+            }
+
+            .container__nav {
+                -ms-grid-row: 2;
+                -ms-grid-row-span: 2;
+                -ms-grid-col: 1;
+                -ms-grid-col-span: 1;
+            }
+
+            .container__parallax--slider {
+                -ms-grid-row: 2;
+                -ms-grid-row-span: 2;
+                -ms-grid-col: 2;
+                -ms-grid-col-span: 2;
+            }
+
+            .container__img--social {
+                -ms-grid-row: 3;
+                -ms-grid-row-span: 1;
+                -ms-grid-col: 4;
+                -ms-grid-col-span: 1;
+            }
+
+            .container--empty {
+                -ms-grid-row: 2;
+                -ms-grid-row-span: 1;
+                -ms-grid-col: 4;
+                -ms-grid-col-span: 1;
+            }
+
+        }
+
+    }
+}

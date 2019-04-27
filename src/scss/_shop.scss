@@ -1,0 +1,183 @@
+/* ----------Shop section settings----------- */
+
+section#shop {
+    position: relative;
+    top: -720px;
+
+    .container--title {
+        display: block;
+        position: relative;
+        width: 362px;
+
+        p {
+            position: absolute;
+            top: -18%;
+            left: 10%;
+            color: $primaryColor;
+            font-family: 'whomp';
+            font-size: 151px;
+            -webkit-text-stroke: 1px $secondaryColor;
+
+        }
+
+        #horizontal--title-line {
+            position: absolute;
+            top: 40%;
+            left: 120%;
+        }
+    }
+
+ 
+    .grid-container {
+        margin-top: 46px;
+        justify-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 12px;
+        grid-template-areas: "tlr__shop--item tmr__shop--item trr__shop--item""blr__shop--item bcr__shop--item brr__shop--item";
+    }
+
+  
+
+    .tlr__shop--item {
+        grid-area: tlr__shop--item;
+
+        .container__card--shop {
+            position: relative;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            width: 393px;
+
+            .container--sideline {
+                position: absolute;
+                top: 18px;
+                left: 0;
+            }
+
+            .container--information {
+                position: absolute;
+                top: -12px;
+                left: -14px;
+            }
+
+            .container--cart {
+                position: absolute;
+                top: -72px;
+                left: 92%;
+                display: inline;
+
+                p {
+                    display: inline;
+                    position: relative;
+                    top: 26px;
+                    left: 40px;
+                    font-family: 'roboto';
+                    color: $secondaryColor;
+                    font-size: 36px;
+                    line-height: 48px;
+                    font-weight: bold;
+                  
+                    sup {
+                        font-weight: bold;
+                    }
+                }
+
+             
+            }
+            .container--buy-now {
+                width: 395px;
+                height: 160px;
+                background: $tertiaryColor;
+                
+
+                button {
+                    width: 250px;
+                    height: 73px;
+                    margin: 43px 18px;
+                    background: $secondaryColor;
+                    border: none;
+                    border-radius: 6px;
+                    font-family: 'whomp';
+                    font-size: 28px;
+                    line-height: 55px;
+                    color: $primaryColor;
+                    
+                }
+            }
+           
+        }
+    }
+
+    .tmr__shop--item {
+        grid-area: tmr__shop--item;  
+    }
+
+    .trr__shop--item {
+        grid-area: trr__shop--item;
+    }
+
+    .blr__shop--item {
+        grid-area: blr__shop--item;
+    }
+
+    .bcr__shop--item {
+        grid-area: bcr__shop--item;
+    }
+
+    .brr__shop--item {
+        grid-area: brr__shop--item;
+    }
+
+
+    @media all and (-ms-high-contrast:none) {
+        .grid-container {
+            display: -ms-grid;
+            -ms-grid-columns: 1fr 1fr 1fr;
+            -ms-grid-rows: 1fr 1fr;
+        }
+
+        .tmr__shop--item {
+            -ms-grid-row: 1;
+            -ms-grid-row-span: 1;
+            -ms-grid-col: 2;
+            -ms-grid-col-span: 1;
+        }
+
+        .tlr__shop--item {
+            -ms-grid-row: 1;
+            -ms-grid-row-span: 1;
+            -ms-grid-col: 1;
+            -ms-grid-col-span: 1;
+        }
+
+        .trr__shop--item {
+            -ms-grid-row: 1;
+            -ms-grid-row-span: 1;
+            -ms-grid-col: 3;
+            -ms-grid-col-span: 1;
+        }
+
+        .blr__shop--item {
+            -ms-grid-row: 2;
+            -ms-grid-row-span: 1;
+            -ms-grid-col: 1;
+            -ms-grid-col-span: 1;
+        }
+
+        .bcr__shop--item {
+            -ms-grid-row: 2;
+            -ms-grid-row-span: 1;
+            -ms-grid-col: 2;
+            -ms-grid-col-span: 1;
+        }
+
+        .brr__shop--item {
+            -ms-grid-row: 2;
+            -ms-grid-row-span: 1;
+            -ms-grid-col: 3;
+            -ms-grid-col-span: 1;
+        }
+
+    }
+}

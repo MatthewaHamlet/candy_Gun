@@ -1,0 +1,25 @@
+/* ----------Variable Global settings----------- */
+
+
+
+//  Main font styles
+
+ @font-face {
+    font-family: 'whompregular';
+    src: url('/src/fonts/whomp/whomp-webfont.woff2') format('woff2'),
+         url('/src/fonts/whomp/whomp-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+// Pallette 
+
+$primaryColor: #ffffff;
+$secondaryColor: #DD86A4;
+$tertiaryColor: rgba(229, 150, 175, 0.31);
+
+// Global style constants 
+
+$heartCursor: url(/images/indexImg/header/nav/cursor/heartCursor.png), auto;
+$heartCursorTwo: url(/images/indexImg/header/nav/cursor/heartCursorTwo.png), auto;

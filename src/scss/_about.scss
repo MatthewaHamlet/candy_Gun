@@ -1,0 +1,91 @@
+/* ----------About section settings----------- */
+@import 'variables';
+
+
+
+section#about {
+    width: 100vw;
+    height: 1448.67px;
+    background: url(/images/backgrounds/aboutSectionBackground/aboutSectionBG.svg)no-repeat center center;
+    background-size: cover;
+    position: relative;
+    top: -200px;
+
+    .container--about {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+
+        .container--center--cta {
+            width: 50%;
+            height: 100%;
+            margin: auto;
+
+            .title {
+                display: block;
+
+                h2 {
+                    text-align: center;
+                    font-family: 'whomp';
+                    font-size: 151px;
+                    line-height: 295px;
+                    color: $secondaryColor;
+                    margin-bottom: -36px;
+                }
+            }
+
+            .copy {
+                display: block;
+
+                p {
+                    font-family: 'Roboto';
+                    -webkit-text-stroke: 1px $secondaryColor;
+                    font-size: 36px;
+                    line-height: 48px;
+                    color: $secondaryColor;
+                }
+            }
+        }
+
+        .button {
+
+            a {
+                text-decoration: none;
+
+                // Global Btn 
+                .about__btn--cta {
+                    width: 303px;
+                    height: 72px;
+                    background: $secondaryColor;
+                    border-radius: 6px;
+                    font-size: 28px;
+                    font-family: 'whomp';
+                    color: $primaryColor;
+                    line-height: 55px;
+                    margin-top: 32px;
+                    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+                    outline: none;
+                    border: none;
+                    cursor: $heartCursor;
+
+                    &:hover {
+                        background: $primaryColor;
+                        color: $secondaryColor;
+                        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16);
+                        transition: all .5s;
+                    }
+
+                    &:active {
+                        background: $primaryColor;
+                        color: $secondaryColor;
+                        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16);
+                        transition: all .5s;
+                    }
+                }
+            }
+        }
+
+    }
+}

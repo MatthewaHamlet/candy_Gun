@@ -2,7 +2,7 @@
 @import 'variables';
 
 
-
+// About section 
 section#about {
     width: 100vw;
     height: 1448.67px;
@@ -17,7 +17,7 @@ section#about {
         display: flex;
         flex-wrap: wrap;
         text-align: center;
-
+// CTA 
         .container--center--cta {
             width: 50%;
             height: 100%;
@@ -54,7 +54,7 @@ section#about {
             a {
                 text-decoration: none;
 
-                // Global Btn 
+                // Btn 
                 .about__btn--cta {
                     width: 303px;
                     height: 72px;
@@ -75,6 +75,7 @@ section#about {
                         color: $secondaryColor;
                         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16);
                         transition: all .5s;
+                        border: 2px solid $secondaryColor;
                     }
 
                     &:active {

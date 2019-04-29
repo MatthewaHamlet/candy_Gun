@@ -50,5 +50,19 @@ $(function() {
     window.location = "./landing.html";
   }
 });
-
 */
+// !!!!!!!!!! MOVE THIS TO A SEPARATE FILE !!!!!!!!!!!!!!!!!
+$(function() {
+
+  $('img[alt="Heart icon"').on('click',function() {
+    console.log('works')
+   if($(this).attr('src') === "images/whatsNew/blogCardIcons/heartOpen.png") {
+    $(this).attr('src', "images/whatsNew/blogCardIcons/heartClosed.png");
+   } else {
+    $(this).attr('src', "images/whatsNew/blogCardIcons/heartOpen.png");
+   }
+  })
+ 
+})
+// !!!!!!!!!! MOVE THIS TO A SEPARATE FILE !!!!!!!!!!!!!!!!!
+

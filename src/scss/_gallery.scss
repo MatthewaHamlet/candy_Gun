@@ -20,12 +20,17 @@ section#gallery {
         justify-items: center;
 // Grid Items
         .galley--item {
-            width: 434px;
+            width: 436px;
             height: 436px;
             margin: 0;
             padding: 0;
             position: relative;
 
+            @media (min-width: 1024px) and (max-width: 1440px) {
+                width: 334px;
+                height: 336px;
+                margin-bottom: 64px;
+            }
 // Hover event 
             &:hover {
                 transform: scale(1.1);
@@ -56,6 +61,7 @@ section#gallery {
 
         .tlr__img {
             grid-area: tlr__img;
+           
         }
 
         .tcr__img {
@@ -89,6 +95,8 @@ section#gallery {
         .brl__img {
             grid-area: brl__img;
         }
+
+    
     }
 
     // Gallery navigation 
@@ -195,5 +203,9 @@ section#gallery {
             -ms-grid-col-span: 1;
         }
 
+    }
+
+    @media (min-width: 1024px) and (max-width: 1440px) {
+        width: 92vw;
     }
 }

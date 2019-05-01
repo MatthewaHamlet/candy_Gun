@@ -15,13 +15,20 @@ section#about {
         top: 0px;
     }
 
+    @media (min-width: 768px) and (max-width: 1024px) {
+        top: -80px;
+    }
+    
+    @media (min-width: 425px) and (max-width: 768px) {
+        top: -440px;
+    }
+// About container
     .container--about {
         width: 100%;
         height: 100%;
         display: flex;
         flex-wrap: wrap;
         text-align: center;
-
         // CTA 
         .container--center--cta {
             width: 50%;
@@ -30,7 +37,7 @@ section#about {
 
             .title {
                 display: block;
-
+                // Title and Heading
                 h2 {
                     text-align: center;
                     font-family: 'whomp';
@@ -38,6 +45,15 @@ section#about {
                     line-height: 295px;
                     color: $secondaryColor;
                     margin-bottom: -36px;
+
+                    @media (min-width: 768px) and (max-width: 1024px) {
+                        font-size: 120px;
+                    }
+
+                    @media (min-width: 425px) and (max-width: 768px) {
+                        font-size: 100px;
+                        margin-bottom: -64px;
+                    }
                 }
             }
 
@@ -52,9 +68,22 @@ section#about {
                     color: $secondaryColor;
 
                     @media (min-width: 1024px) and (max-width: 1440px) {
-                       font-size: 24px;
-                     } 
+                        font-size: 24px;
+                    }
+
+                    @media (min-width: 768px) and (max-width: 1024px) {
+                        font-size: 18px;
+                        line-height: 32px;
+                    }
+
+                    @media (min-width: 425px) and (max-width: 768px) {
+                        font-size: 16px;
+                    }
                 }
+            }
+
+            @media (min-width: 425px) and (max-width: 768px) {
+                width: 70%;
             }
         }
 
@@ -62,7 +91,6 @@ section#about {
 
             a {
                 text-decoration: none;
-
                 // Btn 
                 .about__btn--cta {
                     width: 303px;
@@ -81,6 +109,12 @@ section#about {
 
                     @media (min-width: 1024px) and (max-width: 1440px) {
                         width: 283px;
+                    }
+
+                    @media (min-width: 768px) and (max-width: 1024px) {
+                        width: 200px;
+                        height: 68px;
+                        font-size: 20px;
                     }
 
                     &:hover {
@@ -103,10 +137,19 @@ section#about {
 
         @media (min-width: 1024px) and (max-width: 1440px) {
             .vertical--line {
-               img {
-                   height: 180px;
-                   width: 16px;
-               }
+                img {
+                    height: 180px;
+                    width: 16px;
+                }
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .vertical--line {
+                img {
+                    height: 180px;
+                    width: 16px;
+                }
             }
         }
     }

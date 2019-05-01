@@ -11,13 +11,18 @@ section#about {
     position: relative;
     top: -200px;
 
+    @media (min-width: 1024px) and (max-width: 1440px) {
+        top: 0px;
+    }
+
     .container--about {
         width: 100%;
         height: 100%;
         display: flex;
         flex-wrap: wrap;
         text-align: center;
-// CTA 
+
+        // CTA 
         .container--center--cta {
             width: 50%;
             height: 100%;
@@ -45,6 +50,10 @@ section#about {
                     font-size: 36px;
                     line-height: 48px;
                     color: $secondaryColor;
+
+                    @media (min-width: 1024px) and (max-width: 1440px) {
+                       font-size: 24px;
+                     } 
                 }
             }
         }
@@ -70,6 +79,10 @@ section#about {
                     border: none;
                     cursor: $heartCursor;
 
+                    @media (min-width: 1024px) and (max-width: 1440px) {
+                        width: 283px;
+                    }
+
                     &:hover {
                         background: $primaryColor;
                         color: $secondaryColor;
@@ -88,5 +101,13 @@ section#about {
             }
         }
 
+        @media (min-width: 1024px) and (max-width: 1440px) {
+            .vertical--line {
+               img {
+                   height: 180px;
+                   width: 16px;
+               }
+            }
+        }
     }
 }
